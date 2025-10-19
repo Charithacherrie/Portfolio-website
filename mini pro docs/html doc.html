@@ -3,69 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Branding Portfolio</title>
-    <link rel="stylesheet" href="css doc.css">
+    <title>skillsync</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Main Page: Logo Popup -->
     <section class="main-page" id="main-page">
         <div class="logo-container">
-            <h1 class="logo-text" id="logo">Your Name</h1>
+            <img src="logo.png" alt="Skillsync Logo" class="logo-text" id="logo">
         </div>
     </section>
 
-    <!-- Second Page: Logo, Content, Glowing Start Button, Login/Registration -->
+    <!-- Second Page: Logo, Content, Login/Registration -->
     <section class="second-page" id="second-page" style="display: none;">
         <div class="second-page-container">
-            <h1 class="logo-text" id="logo-second">Your Name</h1>
+            <img src="logo.png" alt="Skillsync Logo" class="logo-text" id="logo-second">
             <div class="content-container" id="content-container">
                 <div class="content-wrapper" id="content-wrapper">
-                    <p class="content-line">Creative [Your Profession] crafting unique solutions.</p>
+                    <p class="content-line">Creative PORTFOLIO WEBSITE FOR PERSONAL BRANDING crafting unique solutions.</p>
                     <p class="content-line">Join me to explore my portfolio and services.</p>
                     <button class="btn btn-primary btn-glow" id="start-btn">Start</button>
                 </div>
-                <div class="auth-container" id="auth-container" style="display: none;">
-                    <!-- Login Form -->
-                    <form class="login-form" id="login-form" style="display: none;">
-                        <h3>Login</h3>
-                        <input type="text" placeholder="Username" required>
-                        <input type="password" placeholder="Password" id="login-password" required>
-                        <label class="show-password">
-                            <input type="checkbox" id="show-login-password"> Show Password
-                        </label>
+                <div class="login-form" id="login-form" style="display: none;">
+                    <h2 class="form-title" id="login-title">Login</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" id="login-password" required>
+                            <align justify><label><input type="checkbox" id="show-password">Show Password</label></align>
+                        </div>
                         <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
-                        <p class="toggle-text">No account? <a href="#" id="show-register">Register here</a></p>
+                        <p class="no-account">Don't have an account? <a href="#" id="register-link">Register here</a></p>
                     </form>
-                    <!-- Registration Form -->
-                    <form class="register-form" id="register-form" style="display: none;">
-                        <h3>Register</h3>
-                        <input type="text" placeholder="Username" required>
-                        <input type="password" placeholder="Password" id="register-password" required>
-                        <label class="show-password">
-                            <input type="checkbox" id="show-register-password"> Show Password
-                        </label>
-                        <button type="submit" class="btn btn-primary" id="register-btn">Register</button>
-                        <p class="toggle-text">Already have an account? <a href="#" id="show-login">Login here</a></p>
+                </div>
+                <div class="register-form" id="register-form" style="display: none;">
+                    <h2 class="form-title">Register</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" required>
+                            <label><input type="checkbox" id="show-password">Show Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="goToDashboard()">Register</button>
+                         <p class="no-account">Already have an account? <a href="#" id="login-link">Login here</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Popup Modal -->
-    <div class="modal" id="auth-modal" style="display: none;">
-        <div class="modal-content">
-            <h3 id="modal-title">Success</h3>
-            <p id="modal-message">Logging in...</p>
-        </div>
-    </div>
-
     <!-- Dashboard Page -->
     <main class="dashboard" id="dashboard" style="display: none;">
         <header class="header">
             <nav class="nav">
                 <div class="nav-logo">
-                    <h1 class="logo-text">Your Name</h1>
+                    <img src="logo.png" alt="Skillsync Logo" class="logo-text dashboard-logo">
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#dashboard" class="nav-link">Dashboard</a></li>
@@ -98,6 +95,6 @@
         </section>
     </main>
 
-    <script src="js.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
